@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" href="/caseConverter.css">
 	<title>Document</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
 </head>
 <body>
 	<div class="ui container">
@@ -20,26 +20,26 @@
 				    <button class="ui icon button" title="copy">
 				    	<i class="copy outline icon violet"></i>
 				    </button>
-					<textarea></textarea>
+					<textarea id="textInput"></textarea>
 					<form action="">
 						<div class="ui form">
 						  	<div class="inline fields">
 						    	<label for="fruit">Input Case:</label>
 						    	<div class="field">
 							      	<div class="ui radio checkbox">
-							        	<input type="radio" id="camelInput" name="input" tabindex="0" class="hidden">
+							        	<input type="radio" value="camelInput" name="input" tabindex="0" class="hidden">
 							        	<label>camelCase</label>
 							      	</div>
 						    	</div>
 							    <div class="field">
 								    <div class="ui radio checkbox">
-									    <input type="radio" id="kebabInput" name="input" tabindex="0" class="hidden">
+									    <input type="radio" value="kebabInput" name="input" tabindex="0" class="hidden">
 									    <label>kebab-case</label>
 								    </div>
 							    </div>
 							    <div class="field">
 								    <div class="ui radio checkbox">
-									    <input type="radio" id="snakeInput" name="input" tabindex="0" class="hidden">
+									    <input type="radio" value="snakeInput" name="input" tabindex="0" class="hidden">
 									    <label>snake_case</label>
 								    </div>
 							    </div>
@@ -54,26 +54,26 @@
 				    <button class="ui icon button" title="copy">
 				    	<i class="copy outline icon violet"></i>
 				    </button>
-					<textarea></textarea>
+					<textarea id="textOutput"></textarea>
 					<form action="">
 						<div class="ui form">
 						  	<div class="inline fields">
 						    	<label for="fruit">Output Case:</label>
 						    	<div class="field">
 							      	<div class="ui radio checkbox">
-							        	<input type="radio" id="camelOutput" name="output" tabindex="0" class="hidden">
+							        	<input type="radio" value="camelOutput" name="output" tabindex="0" class="hidden">
 							        	<label>camelCase</label>
 							      	</div>
 						    	</div>
 							    <div class="field">
 								    <div class="ui radio checkbox">
-									    <input type="radio" id="kebabOutput" name="output" tabindex="0" class="hidden">
+									    <input type="radio" value="kebabOutput" name="output" tabindex="0" class="hidden">
 									    <label>kebab-case</label>
 								    </div>
 							    </div>
 							    <div class="field">
 								    <div class="ui radio checkbox">
-									    <input type="radio" id="snakeOutput" name="output" tabindex="0" class="hidden">
+									    <input type="radio" value="snakeOutput" name="output" tabindex="0" class="hidden">
 									    <label>snake_case</label>
 								    </div>
 							    </div>
@@ -81,6 +81,9 @@
 						</div>
 					</form>
 				</div>
+			</div>
+			<div class="ui aligned center">
+				<button id="convert">Convert!</button>
 			</div>
 		</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
